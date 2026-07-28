@@ -28,4 +28,4 @@ python -m src.pipeline --data data/emails.csv --out results/   # real run
 
 ---
 
-*Author: Mivics1*
+*Author: Agboola Michael Daramola*

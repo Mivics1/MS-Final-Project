@@ -3,19 +3,15 @@
 Coursework and dissertation artefact for **CO4011 Master's Project** (MSc
 Cybersecurity with AI, University of Lancashire).
 
-**Project:** *Stylometric Detection of LLM-Generated Phishing — Distinguishing
+**Project:** *Stylometric Detection of LLM-Generated Phishing - Distinguishing
 AI-Crafted Credential-Harvesting Emails from Human-Written Phishing.*
 
 ## Contents
 
 | Item | Description |
 |---|---|
-| `CO4011_Assessment_Brief.docx` | The module assessment brief (benchmark for marking). |
-| `Project_Proposal_DRAFT.docx` | Deliverable 1 — proposal (problem, ethics, Gantt). |
-| `Dissertation_Framework.docx` | Chapter framework mapped to the brief & marking matrix. |
-| `Unit_1.1_Working_Outline.docx` | Unit 1.1 project-ideas outline. |
-| `Unit_1.x` / `Task_1.x` | Unit task worksheets. |
 | `MS-Artifacts/` | The reproducible ML pipeline (see its own README). |
+| `MS-Final-Dissertation/` | My project dissertation. |
 
 ## Artefact quick start
 

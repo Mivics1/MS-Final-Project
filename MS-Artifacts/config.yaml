@@ -1,0 +1,31 @@
+# Pipeline configuration (documents the defaults used in src/).
+seed: 42
+
+data:
+  csv_path: data/emails.csv
+  test_size: 0.15
+  val_size: 0.15
+  dedupe: true            # remove exact duplicates before splitting (leakage guard)
+
+features:
+  # ~55 stylometric + lexical features; see src/features.py FEATURE_NAMES
+  function_words: true
+  urgency_cues: true
+  readability: true
+
+models:
+  logreg: true            # standardised baseline (sanity floor)
+  random_forest: true     # Must-have
+  xgboost: true           # Must-have
+  transformer: false      # Should-have; enable with transformers+torch extras
+
+evaluation:
+  bootstrap_iterations: 2000
+  ci_alpha: 0.05
+  target_f1: 0.90         # success criterion from the proposal
+
+interpretation:
+  impurity: true
+  permutation: true
+  permutation_repeats: 10
+  shap: false             # Could-have; enable with the shap extra

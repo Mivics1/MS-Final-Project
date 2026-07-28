@@ -1,0 +1,86 @@
+{
+  "seed": 42,
+  "min_chars": 150,
+  "max_chars": 8000,
+  "credential_harvesting_screen": {
+    "account_terms": 33,
+    "action_patterns": 20,
+    "rule": "retain iff (account/credential subject) AND (action via link/form/reply or a URL is present)"
+  },
+  "nazario": {
+    "phishing-2022": {
+      "messages": 247,
+      "excluded_folder_internal": 0,
+      "excluded_length_filter": 37,
+      "excluded_non_english": 44,
+      "excluded_not_credential_harvesting": 37,
+      "kept_after_clean": 129
+    },
+    "phishing-2023": {
+      "messages": 419,
+      "excluded_folder_internal": 0,
+      "excluded_length_filter": 22,
+      "excluded_non_english": 50,
+      "excluded_not_credential_harvesting": 63,
+      "kept_after_clean": 284
+    },
+    "phishing-2024": {
+      "messages": 403,
+      "excluded_folder_internal": 1,
+      "excluded_length_filter": 34,
+      "excluded_non_english": 62,
+      "excluded_not_credential_harvesting": 67,
+      "kept_after_clean": 239
+    }
+  },
+  "nazario_exact_duplicates_removed": 90,
+  "eze_shamir": {
+    "files": 865,
+    "excluded_length_filter": 0,
+    "excluded_not_credential_harvesting": 306,
+    "kept_after_clean": 559
+  },
+  "ai_exact_duplicates_removed": 68,
+  "funnel": {
+    "nazario": {
+      "parsed": 1069,
+      "excluded_folder_internal": 1,
+      "excluded_length_filter": 93,
+      "excluded_non_english": 156,
+      "excluded_not_credential_harvesting": 167,
+      "retained_before_dedupe": 652,
+      "exact_duplicates_removed": 90,
+      "after_dedupe": 562,
+      "removed_by_downsampling": 71,
+      "final": 491
+    },
+    "eze_shamir": {
+      "parsed": 865,
+      "excluded_folder_internal": 0,
+      "excluded_length_filter": 0,
+      "excluded_non_english": 0,
+      "excluded_not_credential_harvesting": 306,
+      "retained_before_dedupe": 559,
+      "exact_duplicates_removed": 68,
+      "after_dedupe": 491,
+      "removed_by_downsampling": 0,
+      "final": 491
+    }
+  },
+  "per_class_after_balancing": 491,
+  "total": 982,
+  "provenance": {
+    "class0_source": "Nazario phishing corpus, yearly archives 2022-2024",
+    "class0_url": "https://monkey.org/~jose/phishing/",
+    "class0_licence": "CC BY 4.0 (attribution: Jose Nazario)",
+    "class1_source": "Eze & Shamir (2024) AI-generated phishing corpus (865 emails via the DeepAI text-generation service)",
+    "class1_url": "https://people.cs.ksu.edu/~lshamir/data/ai_phishing/",
+    "download_date": "2026-07-22",
+    "sha256": {
+      "phishing-2022": "a6291e2cb990204766fce425423949b403cce4ae6a660fc8d08812e40a063fa7",
+      "phishing-2023": "5007f1c1dc91b15e93e988afa3a1cf402e15c88f765d3057be8bfec50dae1fe8",
+      "phishing-2024": "60afa40a2757170093a2bde31ec9cda4e54d33992203ce04bfbbc86d2e5e5b99",
+      "AI_phishing_emails.tar.gz": "505245a02b8e02593cec25f51c5ddd32b18883d48528b92b33cab800ae118217"
+    }
+  }
+}

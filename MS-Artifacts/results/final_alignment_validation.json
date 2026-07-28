@@ -1,0 +1,265 @@
+{
+  "validation_date": "2026-07-28T09:58:30",
+  "environment": {
+    "python": "3.9.6",
+    "platform": "macOS-15.7.7-x86_64-i386-64bit"
+  },
+  "corpus_checks": [
+    {
+      "check": "corpus total is 982",
+      "group": "corpus",
+      "pass": true,
+      "detail": "got 982"
+    },
+    {
+      "check": "491 messages per class",
+      "group": "corpus",
+      "pass": true,
+      "detail": "class0=491 class1=491"
+    },
+    {
+      "check": "no empty message text",
+      "group": "corpus",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "labels are exactly {0,1}",
+      "group": "corpus",
+      "pass": true,
+      "detail": "found ['0', '1']"
+    },
+    {
+      "check": "no duplicate normalised hashes remain",
+      "group": "corpus",
+      "pass": true,
+      "detail": "0 duplicates"
+    },
+    {
+      "check": "Appendix B corpus counts reconcile",
+      "group": "corpus",
+      "pass": true,
+      "detail": "nazario: clean=True dedupe=True balance=True; eze_shamir: clean=True dedupe=True balance=True"
+    },
+    {
+      "check": "corpus total equals sum of class finals",
+      "group": "corpus",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "split_checks": [
+    {
+      "check": "random split is 686/148/148",
+      "group": "split",
+      "pass": true,
+      "detail": "got 686/148/148"
+    },
+    {
+      "check": "random test contains 74 per class",
+      "group": "split",
+      "pass": true,
+      "detail": "pos=74 neg=74"
+    },
+    {
+      "check": "partitions sum to corpus size",
+      "group": "split",
+      "pass": true,
+      "detail": "982"
+    }
+  ],
+  "model_checks": [
+    {
+      "check": "logistic confusion matrix is TN72 FP2 FN0 TP74",
+      "group": "models",
+      "pass": true,
+      "detail": "got [[72, 2], [0, 74]]"
+    },
+    {
+      "check": "logreg: confusion matrix sums to test n",
+      "group": "models",
+      "pass": true,
+      "detail": "148 vs 148"
+    },
+    {
+      "check": "logreg: precision/recall/F1/accuracy recompute from matrix",
+      "group": "models",
+      "pass": true,
+      "detail": "recomputed P=0.973684 R=1.000000 F1=0.986667 A=0.986486"
+    },
+    {
+      "check": "logreg: F1 within its bootstrap interval",
+      "group": "models",
+      "pass": true,
+      "detail": "0.987 in [0.965,1.000]"
+    },
+    {
+      "check": "random_forest: confusion matrix sums to test n",
+      "group": "models",
+      "pass": true,
+      "detail": "148 vs 148"
+    },
+    {
+      "check": "random_forest: precision/recall/F1/accuracy recompute from matrix",
+      "group": "models",
+      "pass": true,
+      "detail": "recomputed P=0.986111 R=0.959459 F1=0.972603 A=0.972973"
+    },
+    {
+      "check": "random_forest: F1 within its bootstrap interval",
+      "group": "models",
+      "pass": true,
+      "detail": "0.973 in [0.942,0.994]"
+    },
+    {
+      "check": "xgboost: confusion matrix sums to test n",
+      "group": "models",
+      "pass": true,
+      "detail": "148 vs 148"
+    },
+    {
+      "check": "xgboost: precision/recall/F1/accuracy recompute from matrix",
+      "group": "models",
+      "pass": true,
+      "detail": "recomputed P=0.986301 R=0.972973 F1=0.979592 A=0.979730"
+    },
+    {
+      "check": "xgboost: F1 within its bootstrap interval",
+      "group": "models",
+      "pass": true,
+      "detail": "0.980 in [0.953,1.000]"
+    }
+  ],
+  "robustness_checks": [
+    {
+      "check": "ablation removes only URL and email-address counts",
+      "group": "robustness",
+      "pass": true,
+      "detail": "dropped ['email_addr_count', 'url_count']"
+    },
+    {
+      "check": "grouped partition sizes sum to corpus size",
+      "group": "robustness",
+      "pass": true,
+      "detail": "833+149"
+    },
+    {
+      "check": "grouped test class counts sum to grouped test n",
+      "group": "robustness",
+      "pass": true,
+      "detail": "74+75=149"
+    },
+    {
+      "check": "similarity clusters do not cross grouped partitions",
+      "group": "robustness",
+      "pass": true,
+      "detail": "0 clusters straddle"
+    },
+    {
+      "check": "grouped split reproduces stored partition sizes",
+      "group": "robustness",
+      "pass": true,
+      "detail": "recomputed 833/149"
+    },
+    {
+      "check": "2022-only subset is balanced",
+      "group": "robustness",
+      "pass": true,
+      "detail": "pos=13 neg=13"
+    },
+    {
+      "check": "2022-only per-class count reproduces",
+      "group": "robustness",
+      "pass": true,
+      "detail": "recomputed 86 vs stored 86"
+    },
+    {
+      "check": "2022-only train/test sizes reproduce",
+      "group": "robustness",
+      "pass": true,
+      "detail": "recomputed 120/26 vs stored 120/26"
+    },
+    {
+      "check": "2022-only partitions sum to the subset size",
+      "group": "robustness",
+      "pass": true,
+      "detail": "120+26+26 vs 2x86"
+    }
+  ],
+  "feature_checks": [
+    {
+      "check": "feature-means CSV agrees with analysis JSON",
+      "group": "features",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "importance overlap count is 7",
+      "group": "features",
+      "pass": true,
+      "detail": "got 7"
+    },
+    {
+      "check": "Spearman rho is 0.00 with p = 1.00",
+      "group": "features",
+      "pass": true,
+      "detail": "rho=0.0000 p=1.0000"
+    }
+  ],
+  "checksum_checks": [
+    {
+      "check": "source checksums agree with the reported values",
+      "group": "checksums",
+      "pass": true,
+      "detail": "all present files match"
+    }
+  ],
+  "document_checks": [
+    {
+      "check": "Table 6.1 values agree with generated results",
+      "group": "document",
+      "pass": true,
+      "detail": "all match"
+    },
+    {
+      "check": "Table 6.4 values agree with generated robustness outputs",
+      "group": "document",
+      "pass": true,
+      "detail": "all match"
+    },
+    {
+      "check": "feature means in the document agree with the analysis",
+      "group": "document",
+      "pass": true,
+      "detail": "all match"
+    },
+    {
+      "check": "document retains a table of contents",
+      "group": "document",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "document retains List of Figures and List of Tables",
+      "group": "document",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no unresolved placeholder text remains",
+      "group": "document",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "figures are embedded in the document",
+      "group": "document",
+      "pass": true,
+      "detail": "4 images"
+    }
+  ],
+  "total_checks": 40,
+  "passed": 40,
+  "failed": 0,
+  "overall": "PASS"
+}

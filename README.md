@@ -3,8 +3,8 @@
 Coursework and dissertation artefact for **CO4011 Master's Project** (MSc
 Cybersecurity with AI, University of Lancashire).
 
-**Project:** *Stylometric Detection of LLM-Generated Phishing - Distinguishing
-AI-Crafted Credential-Harvesting Emails from Human-Written Phishing.*
+**Project:** *Stylometric Detection of LLM-Generated Phishing - Distinguishing 
+Known AI-Generated Credential-Harvesting Emails from Real-World Phishing.*
 
 ## Contents
 
